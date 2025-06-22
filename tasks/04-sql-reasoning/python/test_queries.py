@@ -16,7 +16,6 @@ def _fetch(sql: str):
         cur = conn.execute(sql)
         header = [c[0] for c in cur.description]
         rows = [tuple(str(v) for v in r) for r in cur.fetchall()]
-
     return header, rows
 
 
